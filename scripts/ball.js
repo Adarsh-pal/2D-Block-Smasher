@@ -39,6 +39,8 @@ let value = style1.getPropertyValue("height");
 let ht = parseFloat(value.substring(0,value.length-2));
 let blocks = [];
 
+let leftTouch = false;
+let rightTouch = false;
 
 function script(){
 
@@ -94,12 +96,12 @@ function drawBar(){
 
 function barMove(){
   
-  if(rightArrow && (bar.width + bar.x)< canvas.width )
+  if((rightArrow || rightTouch) && (bar.width + bar.x)< canvas.width )
   {
      bar.x += bar.dx;
 
   }
-  else if(leftArrow && bar.x>0 )
+  else if((leftArrow || leftTouch) && bar.x>0 )
   {
      bar.x -= bar.dx;
 
