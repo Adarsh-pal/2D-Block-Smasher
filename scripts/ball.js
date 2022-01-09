@@ -450,3 +450,42 @@ function exitHandler()
   dot.classList.remove("transition1");
   dot.classList.add("transition2");
 }
+
+canvas.addEventListener("touchstart",(event)=>{
+  if(event.touches[0].pageX < canvas.offsetWidth/2)
+  
+  {
+  
+    leftTouch = true;
+  
+  }
+  
+  if(event.touches[0].pageX > canvas.offsetWidth/2)
+  
+  {
+    rightTouch = true;
+  }
+  
+  },false);
+  
+  canvas.addEventListener("touchend",(event)=>{
+  
+    if(event.changedTouches[0].pageX < canvas.offsetWidth/2)
+  
+  {
+  
+    leftTouch = false;
+  
+    
+  
+  }
+  
+  if(event.changedTouches[0].pageX > canvas.offsetWidth/2)
+  
+  {
+  
+    rightTouch = false;
+  
+  }
+  
+  },false);
