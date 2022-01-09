@@ -1,0 +1,230 @@
+ *{
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: teal;
+}
+
+.container .sidebar{
+    padding: 0px;
+}
+
+.inst{
+    background-color :lightseagreen;
+    height: 100%;
+    padding: 15px;
+    margin: 0px;
+}
+
+
+h4{
+    color: yellow;
+    text-shadow: 2px 2px 10px black;
+    margin: 0%;
+}
+
+.list{
+    
+    list-style-position: inside;
+    margin: 0px;
+    padding: 1vw 0 1vw 0;
+}
+
+li:nth-child(n){
+    background-color: mediumturquoise;
+
+}
+.list1 li, #list2 div{
+    margin: 1vw 0 1vw 0;
+    padding: 1vw;
+}
+
+li:hover, #list2 div:hover{
+    background-color: black;
+    color: white;
+}
+
+div.toggle-switch>div> h4{
+    margin-top: 7%;
+}
+
+
+.gamepad{
+    position: relative;
+    height: 100vh;
+}
+
+.canvas{
+    width: 100%;
+    height: 100%;
+    background-color: teal;
+   
+    font-family: Reggae-One;
+}
+
+.play{
+    position: absolute;
+    top: 65%;
+    left: 41%;
+    width: 17%;
+    height: 25%;
+}
+
+
+@keyframes box{
+    0% {
+        width: 6%;
+        left: 47%;
+    }
+    100% {
+        width: 30%;
+        left: 35%;
+    }
+}
+
+.alert{
+    display: none;   
+    position: absolute;
+    width: 30%;
+    height: auto;
+    top: 40%;
+    padding: 0%;
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    animation: box 500ms linear 1 forwards;
+    
+}
+
+div.button{
+    float: right; 
+    margin-top: 0%;
+
+}
+
+.btn{
+    padding: 3px 6px;
+    background-color: black;
+    color: white;
+}
+.yourScore{
+    clear: right;
+}
+
+.stat-container{
+    height: 90%;
+    padding: 0%;
+}
+
+.stat-container>div{
+    float: left;
+}
+.stat-container .text{
+    float: right;
+}
+
+.head{
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+    font-size: large;
+    font-weight: bold; 
+    background-color: teal;
+    color: white; 
+}
+
+
+#list2 div{
+    width: 100%;
+}
+#list2 div{
+    background-color: mediumturquoise;
+    padding: 0.5vw;
+}
+
+.toggle{
+    position : relative ;
+    float: right;
+    width : 80%;
+    height : 40%;
+    background-color: black;
+    border-radius: 25%/50%;
+    border: 2px solid black;
+}
+.toggle-switch{
+ width: 100%;
+ height: 10%;
+}
+
+.toggle-switch>div {
+    height: 100%;
+    padding: 0px;
+}
+
+.toggle-switch .switch{
+    padding-top: 10px;
+    float: right;
+}
+
+.dot {
+    position: absolute;
+    width: 40%;
+    height: 90%;
+    border-radius: 50%;
+    background-color: blue;
+    top: 6%; 
+    left: 2%;
+}       
+
+@keyframes transition1{
+    0%{
+        left: 2%;
+    }
+    100%{
+        left: 55%;
+    }
+}
+
+
+@keyframes transition2{
+    0%{
+        left: 53%;
+    }
+    100%{
+        left: 2%;
+    }
+}
+
+.transition1{
+    animation: transition1 0.5s forwards;
+}
+.transition2{
+    animation: transition2 0.5s forwards;
+}
+
+
+@media (min-width: 992px){
+
+    .sidebar{
+   
+        height: 100vh;
+    }
+  
+}
+
+@media (max-width: 991px){
+    #sidebar2{
+        display: none;
+    }
+    #sidebar1{
+        margin-top: 3%;
+    }
+    .gamepad{
+        background-color: lightseagreen;
+        padding: 2%;
+        margin-top: 3%;
+    }
+}

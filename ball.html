@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A 2D Game developed using HTML5 Canvas API">
+  <meta name="author" content="Adarsh Pal">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="stylesheets/ball.css" type="text/css">
+  <title>2D Block Smasher</title>
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="col-lg-2 col-md-2 sidebar" id="sidebar1">
+      <div class="inst col-lg-12 col-md-12" id="inst"><p><h4 class="text-center">INSTRUCTIONS:</h4></p>
+        <hr>
+        <ol id="list" class="list list1">
+          <li>The main objective of the game is to destroy all the blocks with the help of the ball.</li>
+          <li>To move the bar use arrow keys.</li>
+          <li>To move LEFT press <i>left arrow key</i>.</li>
+          <li>To move RIGHT press <i>right arrow key</i></li>
+          <li>Make sure that the ball don't touches the bottom</li>
+        </ol>
+      </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 gamepad" id="gamepad">
+      <canvas id="canvas" class="canvas" width="800px" height="650px"></canvas>
+      <div class="alert" id="alert">
+        <div class="button">
+          <button type="button" class="btn btn-default" id="close" aria-label="remove">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="yourScore text-center">
+          <p id="msg" class="msg">Your Score</p>
+          <p id="score" class="score">2345</p>
+        </div>
+      </div>
+      <img class="play" id="play" src="images/play.png" />
+    </div>
+    <div class="col-lg-2 col-md-2 sidebar" id="sidebar2">
+      <div class="inst col-lg-12 col-md-12">
+        <div class="toggle-switch">
+          <div class="col-lg-8 col-md-8"><h4>Fullscreen mode</h4></div>
+          <div class="switch col-lg-4 col-md-4">
+            <div class="toggle">
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+        <div class="stat-container col-lg-12 col-md-12" id="stat-container">
+          <div class="head text-center">
+            <div class="col-lg-6 col-md-6">Round</div>
+            <div class="col-lg-6 col-md-6 text">Score</div>
+          </div>
+          <div class="stats count col-lg-12 col-md-12" id="stats">
+            <div id="list2" class="table list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <audio id="audBounce">
+    <source src="sound/bounce.wav" type="audio/wav">
+  </audio>
+  </body>
+  <script src="scripts/ball.js"></script>
+  <script src="scripts/component.js"></script>
+</html>
